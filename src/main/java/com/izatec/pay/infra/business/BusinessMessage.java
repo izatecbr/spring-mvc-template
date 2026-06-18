@@ -3,9 +3,6 @@ package com.izatec.pay.infra.business;
 import org.springframework.http.HttpStatus;
 
 public enum BusinessMessage {
-    E100("100", "Usuário ou senha inválida","Verifique se os campos foram digitados corretamente"),
-    E101("101", "Campo obrigatório: %s","Preencha o campo obrigatório"),
-    E102("102", "Já existe um registro com %s igual a(o) %s","O registro deve ser único"),
     E404("404", "Não existe um registro de %s com o %s: %s informado","O registro deve existir previamente"){
         @Override
         public int getHttpStatus() {
@@ -18,6 +15,29 @@ public enum BusinessMessage {
             return HttpStatus.NO_CONTENT.value();
         }
     },
+    E501("501", "Erro ao tentar acessar o recurso","Contacte o Suporte Técnico"){
+
+        @Override
+        public int getHttpStatus() {
+            return 500;
+        }
+    },
+    E502("502", "Método não implementado","Contacte o Suporte Técnico"){
+        @Override
+        public int getHttpStatus() {
+            return 500;
+        }
+    },
+    E500("500", "Erro não mapeado","Contacte o Suporte Técnico"){
+
+        @Override
+        public int getHttpStatus() {
+            return 500;
+        }
+    },
+    E100("100", "Usuário ou senha inválida","Verifique se os campos foram digitados corretamente"),
+    E101("101", "Campo obrigatório: %s","Preencha o campo obrigatório"),
+    E102("102", "Já existe um registro com %s igual a(o) %s","O registro deve ser único"),
     E108("108", "Senha expirada","É necessário você alterar a senha"),
     E109("109", "Usuário bloqueado","Favor entre em contato com o administrador do sistema"),
     E110("110", "Usuário ou Senha Inválida","Revise os dados inseridos na autenticação"),
@@ -45,26 +65,6 @@ public enum BusinessMessage {
 
     E900("900", "Token inválido ou expirado","Realize uma nova autenticação"),
 
-    E501("501", "Erro ao tentar acessar o recurso","Contacte o Suporte Técnico"){
-
-        @Override
-        public int getHttpStatus() {
-            return 500;
-        }
-    },
-    E502("502", "Método não implementado","Contacte o Suporte Técnico"){
-        @Override
-        public int getHttpStatus() {
-            return 500;
-        }
-    },
-    E500("500", "Erro não mapeado","Contacte o Suporte Técnico"){
-
-        @Override
-        public int getHttpStatus() {
-            return 500;
-        }
-    },
     ;
     private final String code;
     private final String message;
