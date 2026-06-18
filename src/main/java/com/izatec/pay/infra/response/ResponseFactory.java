@@ -79,12 +79,11 @@ public class ResponseFactory {
 
     private static Response define(Serializable code,Object body, String message, String suggestion, boolean success){
         Response response = new Response();
-        ResponseStatus status = new ResponseStatus();
-        status.code =code;
-        status.message = message;
-        status.suggestion = suggestion;
-        status.success = success;
-        response.setStatus(status);
+        response.codigo =code;
+        response.mensagem = message;
+        response.sugestao = suggestion;
+        response.success = success;
+        response.setData(body);
         /*if(body instanceof Page){
             Page page = (Page) body;
             ResponsePage responsePage = new ResponsePage();
@@ -98,7 +97,7 @@ public class ResponseFactory {
             response.setPage(responsePage);
             response.setBody(page.getContent());
         }else*/
-            response.setBody(body);
+
         return response;
     }
 }
