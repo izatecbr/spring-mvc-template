@@ -2,6 +2,7 @@ package spring.template.app;
 
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Service;
+import spring.template.infra.business.RequiredFieldException;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,6 +28,11 @@ public class AppService {
     }
 
     public Model create(Model model) {
+
+        if(model.getName() ==null || model.getName().isEmpty()){
+            throw new RequiredFieldException("Name");
+        }
+
         Integer id = models.size() + 1;
         model.setId(id);
         models.put(id, model);

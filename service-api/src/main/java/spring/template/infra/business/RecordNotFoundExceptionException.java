@@ -9,7 +9,7 @@ public class RecordNotFoundExceptionException extends BusinessException {
         super(BusinessMessage.E404,entidade,campo, valor.toString());
     }
     public RecordNotFoundExceptionException(String entidade, Object valor) {
-        super(BusinessMessage.E404,entidade,Atributos.ID, valor);
+        super(BusinessMessage.E404, entidade, Atributos.ID.getLegenda(), valor.toString());
     }
     
     public RecordNotFoundExceptionException() {
