@@ -1,0 +1,211 @@
+{
+  "info": {
+    "_postman_id": "4faa0e17-eef4-4ea7-acfa-9525b31c1944",
+    "name": "spring-template",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "32464351",
+    "_collection_link": "https://go.postman.co/collection/32464351-4faa0e17-eef4-4ea7-acfa-9525b31c1944?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "novo",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\":\"Gleyson\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/models",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "models"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "campo-obrigatorio",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/models",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "models"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "altera",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\":\"Lucas\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/models/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "models",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "id-nao-localizado",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\":\"Lucas\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/models/5",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "models",
+            "5"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "busca",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/models/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "models",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "nao-existe",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/models/10",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "models",
+            "10"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "lista",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/models",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "models"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "limpa",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/models",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "models"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
