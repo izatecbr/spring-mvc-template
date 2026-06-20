@@ -35,7 +35,9 @@ public enum BusinessMessage {
             return 500;
         }
     },
-    E100("100", "Usuário ou senha inválida","Verifique se os campos foram digitados corretamente"),
+    E99("99", "O campo %s %s","%s"),
+
+    /*E100("100", "Usuário ou senha inválida","Verifique se os campos foram digitados corretamente"),
     E101("101", "Campo obrigatório: %s","Preencha o campo obrigatório"),
     E102("102", "Já existe um registro com %s igual a(o) %s","O registro deve ser único"),
     E108("108", "Senha expirada","É necessário você alterar a senha"),
@@ -50,7 +52,6 @@ public enum BusinessMessage {
     E127("127", "%s","O campo precisa atender aos requisitos de negócio"),
     E128("128", "%s","Para maiores informações, consulte suporte"),
 
-    E134("134", "O campo %s %s","%s"),
     E135("135", "%s","O registro precisa atender aos requisitos de negócio"),
 
     E140("140", "O valor amortizado corresponde ao valor total do pagamento","Para valor integral, realize a compensação do pagamento"),
@@ -64,7 +65,7 @@ public enum BusinessMessage {
     E182("182", "%s","Siga as instruções"),
 
     E900("900", "Token inválido ou expirado","Realize uma nova autenticação"),
-
+*/
     ;
     private final String code;
     private final String message;

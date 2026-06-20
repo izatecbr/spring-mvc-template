@@ -16,7 +16,7 @@ public class ResponseFactory {
     public static Response okOrNotFound(Object value) {
         return okOrNotFound(value, "Registro localizado com sucesso");
     }
-    public static Response optional(Optional optional, Entidades registro, Atributos campo, Object valor) {
+    public static Response optional(Optional optional, String registro, String campo, Object valor) {
         if(optional.isPresent())
             return ok(optional.get(),"Registro localizado com sucesso");
         else

@@ -11,10 +11,10 @@ public class BusinessException extends  RuntimeException{
         this.httpStatus=error.getHttpStatus();
     }
     public BusinessException(String campo, String validacao, String sugestao){
-        super(String.format(BusinessMessage.E134.getMessage(), new String[]{campo,validacao}));
-        this.errorCode = BusinessMessage.E134.getCode();
+        super(String.format(BusinessMessage.E99.getMessage(), new String[]{campo,validacao}));
+        this.errorCode = BusinessMessage.E99.getCode();
         this.suggestion =  sugestao;
-        this.httpStatus=BusinessMessage.E134.getHttpStatus();
+        this.httpStatus=BusinessMessage.E99.getHttpStatus();
     }
     public BusinessException(String message){
         super(message);
@@ -41,7 +41,7 @@ public class BusinessException extends  RuntimeException{
     public int getHttpStatus() {
         return httpStatus;
     }
-    public static String logMessage(BusinessException be){
+    /*public static String logMessage(BusinessException be){
         return String.format("#ALERTA de Validacao Regra Cod.: %s - Mensagem: %s - Sugestão: %s", be.getErrorCode(), be.getMessage(), be.getSuggestion());
     }
     public static String errorMessage(String mensagem, Object ... params){
@@ -49,5 +49,5 @@ public class BusinessException extends  RuntimeException{
     }
     public static String mensagemErroPersistencia(String entidade, Object identificacao){
         return errorMessage("Não foi possível incluir ou alterar o(a) [%s] | [ %s ]", entidade, identificacao);
-    }
+    }*/
 }
