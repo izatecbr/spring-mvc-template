@@ -50,11 +50,18 @@ public class AppService {
     }
 
     public void delete(Integer id) {
+        if (!models.containsKey(id)) {
+            throw new RecordNotFoundExceptionException("Model", id);
+        }
         models.remove(id);
     }
 
     public Model get(Integer id) {
-        return models.get(id);
+        Model model = models.get(id);
+        if (model == null) {
+            throw new RecordNotFoundExceptionException("Model", id);
+        }
+        return model;
     }
 
     public List<Model> list() {
