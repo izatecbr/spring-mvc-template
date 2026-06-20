@@ -1,7 +1,5 @@
 package spring.template.infra.response;
 
-import spring.template.infra.Atributos;
-import spring.template.infra.Entidades;
 import spring.template.infra.business.BusinessException;
 import spring.template.infra.business.NoResultsFoundException;
 import spring.template.infra.business.RecordNotFoundExceptionException;
