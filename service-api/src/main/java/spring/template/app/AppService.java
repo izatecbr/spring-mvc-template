@@ -60,4 +60,9 @@ public class AppService {
     public List<Model> list() {
         return new ArrayList<>(models.values());
     }
+
+    public void clear() {
+        models.clear();
+    }
+
 }
