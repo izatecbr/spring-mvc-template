@@ -1,10 +1,10 @@
-package com.izatec.pay.infra.response;
+package spring.template.infra.response;
 
-import com.izatec.pay.infra.Atributos;
-import com.izatec.pay.infra.Entidades;
-import com.izatec.pay.infra.business.BusinessException;
-import com.izatec.pay.infra.business.ConsultaSemRegistrosException;
-import com.izatec.pay.infra.business.RegistroNaoLocalizadoException;
+import spring.template.infra.Atributos;
+import spring.template.infra.Entidades;
+import spring.template.infra.business.BusinessException;
+import spring.template.infra.business.NoResultsFoundException;
+import spring.template.infra.business.RecordNotFoundExceptionException;
 import org.springframework.http.HttpStatus;
 
 import java.io.Serializable;
@@ -20,15 +20,15 @@ public class ResponseFactory {
         if(optional.isPresent())
             return ok(optional.get(),"Registro localizado com sucesso");
         else
-            throw new RegistroNaoLocalizadoException(registro,campo,valor);
+            throw new RecordNotFoundExceptionException(registro,campo,valor);
     }
     public static Response okOrNotFound(Object value, String message) {
-        RegistroNaoLocalizadoException exception = new RegistroNaoLocalizadoException();
+        RecordNotFoundExceptionException exception = new RecordNotFoundExceptionException();
         Optional.ofNullable(value).orElseThrow(() -> exception );
         return ok(value,message) ;
     }
     public static Response okOrNoContent(Object value) {
-        ConsultaSemRegistrosException exception = new ConsultaSemRegistrosException();
+        NoResultsFoundException exception = new NoResultsFoundException();
         if (value == null) {
             throw exception;
         }

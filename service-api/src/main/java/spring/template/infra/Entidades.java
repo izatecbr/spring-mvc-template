@@ -1,4 +1,4 @@
-package com.izatec.pay.infra;
+package spring.template.infra;
 
 public enum Entidades {
     CONFIGURACAO("EmpresaConfiguracao", "Configuração"),

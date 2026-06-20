@@ -1,4 +1,4 @@
-package com.izatec.pay.infra.response;
+package spring.template.infra.response;
 
 import lombok.Data;
 

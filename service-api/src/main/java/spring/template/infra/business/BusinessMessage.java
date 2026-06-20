@@ -1,4 +1,4 @@
-package com.izatec.pay.infra.business;
+package spring.template.infra.business;
 
 import org.springframework.http.HttpStatus;
 

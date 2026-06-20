@@ -1,7 +1,7 @@
-package com.izatec.pay.infra.business;
+package spring.template.infra.business;
 
-import com.izatec.pay.infra.response.Response;
-import com.izatec.pay.infra.response.ResponseFactory;
+import spring.template.infra.response.Response;
+import spring.template.infra.response.ResponseFactory;
 import org.springframework.cglib.proxy.UndeclaredThrowableException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;

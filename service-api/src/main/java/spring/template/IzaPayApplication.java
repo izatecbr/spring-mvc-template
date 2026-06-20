@@ -1,9 +1,7 @@
-package com.izatec.pay;
+package spring.template;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.scheduling.annotation.EnableAsync;
-import org.springframework.scheduling.annotation.EnableScheduling;
 
 import java.util.Locale;
 import java.util.TimeZone;
