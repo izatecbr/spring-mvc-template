@@ -35,6 +35,8 @@ public enum BusinessMessage {
             return 500;
         }
     },
+    E01("01", "O campo: %s é obrigatório","Preencha o campo e tente novamente"),
+
     E99("99", "O campo %s %s","%s"),
 
     /*E100("100", "Usuário ou senha inválida","Verifique se os campos foram digitados corretamente"),
