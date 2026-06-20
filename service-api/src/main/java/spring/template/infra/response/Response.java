@@ -8,13 +8,13 @@ import java.time.LocalTime;
 
 @Data
 public class Response {
-	//private ResponseStatus status;
-	LocalDate dia = LocalDate.now();
+	private ResponseStatus status;
+	/*LocalDate dia = LocalDate.now();
 	LocalTime hora = LocalTime.now();
 	boolean success;
 	String mensagem;
 	Serializable codigo;
-	String sugestao;
+	String sugestao;*/
 	private Object data;
 	private ResponsePage page;
 }
