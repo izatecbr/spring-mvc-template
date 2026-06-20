@@ -44,6 +44,6 @@ public class AppController {
     @DeleteMapping
     public ResponseEntity<Response> celar() {
         service.clear();
-        return ResponseEntity.ok(ResponseFactory.ok(true));
+        return ResponseEntity.ok(ResponseFactory.ok(true,"Registros removidos com sucesso"));
     }
 }
