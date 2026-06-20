@@ -2,6 +2,7 @@ package spring.template.app;
 
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Service;
+import spring.template.infra.business.RecordNotFoundExceptionException;
 import spring.template.infra.business.RequiredFieldException;
 
 import java.util.ArrayList;
@@ -40,12 +41,12 @@ public class AppService {
     }
 
     public Model update(Integer id, Model model) {
-        if (models.containsKey(id)) {
-            model.setId(id);
-            models.put(id, model);
-            return model;
+        if (!models.containsKey(id)) {
+            throw new RecordNotFoundExceptionException("Model", id);
         }
-        return null;
+        model.setId(id);
+        models.put(id, model);
+        return model;
     }
 
     public void delete(Integer id) {

@@ -3,6 +3,7 @@ package spring.template.app;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import spring.template.infra.business.RecordNotFoundExceptionException;
 import spring.template.infra.response.Response;
 import spring.template.infra.response.ResponseFactory;
 
@@ -17,5 +18,11 @@ public class AppController {
     public ResponseEntity<Response> create(@RequestBody Model model) {
         Model created = service.create(model);
         return ResponseEntity.status(201).body(ResponseFactory.create(created, "Registro criado com sucesso"));
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Response> update(@PathVariable Integer id, @RequestBody Model model) {
+        Model updated = service.update(id, model);
+        return ResponseEntity.ok(ResponseFactory.ok(updated, "Registro alterado com sucesso"));
     }
 }
